@@ -136,7 +136,6 @@ train_loss_file = open('train_loss.txt', 'w')
 epoch_scale = int(SAMPLES_PER_EPOCH/BATCH_SIZE)
 for i in range(NUMBER_OF_EPOCHS*epoch_scale):
     is_new_epoch = ((i + 1) % epoch_scale == 0)
-    print("Is New Epoch {}".format(is_new_epoch))
     if is_new_epoch:
         epoch_num = int((i + 1) / epoch_scale)
         print("Epoch {}".format(epoch_num))
@@ -176,7 +175,7 @@ for i in range(NUMBER_OF_EPOCHS*epoch_scale):
                               x: batch[1],
                               y_true: batch[0]},
                    session=sess)
-    if (i + 1) % 500 == 0 and not is_new_epoch:
+    if (i + 1) % 50 == 0 and not is_new_epoch:
         loss_val = np.mean(sess.run([loss],
                                 feed_dict={train_flag: True,
                                            x: batch[1],

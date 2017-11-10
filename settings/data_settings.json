@@ -1,5 +1,5 @@
 {
-  "input_dir_name_base": "/Users/raksha/Courses_USC/Deep_Learning/Audio_SuperResolution/inputs/VCTK/{}",
+  "input_dir_name_base": "/home/parul71625/Audio_SuperResolution/inputs/VCTK/{}",
   "input_dir_name_dirs": [
     "dev",
     "test",
@@ -12,5 +12,5 @@
   "splice_duration": 1.0,
   "sampling_rate_units": "kbps",
   "downsample_rate": 12000,
-  "output_dir_name_base": "/Users/raksha/Courses_USC/Deep_Learning/Audio_SuperResolution/output/VCTK/preprocessed"
+  "output_dir_name_base": "/home/parul71625/Audio_SuperResolution/output/VCTK/preprocessed"
 }

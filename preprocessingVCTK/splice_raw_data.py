@@ -2,7 +2,6 @@ import os
 import json
 import tqdm
 import sox
-import scipy.io.wavfile as wav
 
 splice_settings_file = '../settings/data_settings.json'
 
