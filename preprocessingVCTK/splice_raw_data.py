@@ -3,6 +3,7 @@ import json
 import tqdm
 import sox
 
+
 splice_settings_file = '../settings/data_settings.json'
 
 settings = json.load(open(splice_settings_file))
@@ -50,6 +51,7 @@ for input_dir_name_dir in input_dir_name_dirs:
                 processed_data_info['original_bitrate'] *= 1000
 
         n_iterations = int(duration/splice_duration)
+        n_iterations = 1 if n_iterations == 0 else n_iterations
         num_of_digits = len(str(int(duration)))
         num_format = '{{:0{}d}}'.format(num_of_digits)
         file_name_template = '{{}}_{}-{}.wav'.format(num_format, num_format)
